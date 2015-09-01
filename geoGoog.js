@@ -4,8 +4,8 @@ var fs = require("fs")
 var csv = require("fast-csv");
 
 reverseGeocode = function (lat, lng) {
-  //https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&key=AIzaSyCf2LWmrsP6wcHUa_7DXJcE1nlQmJpafKQ
-  var key = "AIzaSyCf2LWmrsP6wcHUa_7DXJcE1nlQmJpafKQ";
+  //https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&key=XXXXXXXXXXXXXXX
+  var key = "XXXXXXXXXXXXXXXX";
 
   var uri = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + "," + lng + "&key=" + key;
 
