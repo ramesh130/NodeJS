@@ -23,7 +23,7 @@ reverseGeocode = function (lat, lng) {
   	  	writableStream.write(result.results[0].address_components[i].short_name + ",");// + result.results[0].address_components[1].short_name + "\n");
   	  }
   	  writableStream.write("\n");
-      
+      //TODO close the file somewhere
     } catch (err) {
       console.log("Exception: " + err);
       return;
@@ -38,6 +38,7 @@ reverseGeocode = function (lat, lng) {
 
 var stream = fs.createReadStream("geo2.csv");
  
+//TODO sequence the API requests for free model
 var csvStream = csv()
     .on("data", function(data){
          console.log(data[0] + " " + data[1]);
